@@ -16,7 +16,7 @@ namespace SpaceDodger
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartSplashScreen());
+            Application.Run(new Form1());
         }
     }
 }
