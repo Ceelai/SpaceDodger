@@ -40,11 +40,11 @@ namespace SpaceDodger
             _picBoxBlock17.Visible = false;
             _picBoxBlock18.Visible = false;
             _lblInstructions.Text = "Press UP arrow to ascend" + Environment.NewLine + " Do not Hit the Obstacles";
-         }
+        }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-           switch (keyData)
+            switch (keyData)
             {
                 case Keys.Left:
                     // The left arrow key is pressed 
@@ -109,8 +109,9 @@ namespace SpaceDodger
 
 
             _lblInstructions.Visible = false;
+            _btnclose.Visible = false;
             var player = new System.Media.SoundPlayer();
-           // player.Stream = Properties.Resources.Kalimba;
+            // player.Stream = Properties.Resources.Kalimba;
             player.Play();
             if (_view == 1)
             {
@@ -121,7 +122,7 @@ namespace SpaceDodger
         private void StartTimer(object sender, EventArgs e)
         {
             _picBoxBlock1.Location = new Point(_picBoxBlock1.Location.X - 3, _picBoxBlock1.Location.Y);
-            _picBoxBlock2.Location = new Point(_picBoxBlock2.Location.X - 3,_picBoxBlock2.Location.Y);
+            _picBoxBlock2.Location = new Point(_picBoxBlock2.Location.X - 3, _picBoxBlock2.Location.Y);
             _picBoxBlock3.Location = new Point(_picBoxBlock3.Location.X - 3, _picBoxBlock3.Location.Y);
             _picBoxBlock4.Location = new Point(_picBoxBlock4.Location.X - 3, _picBoxBlock4.Location.Y);
             _picBoxBlock5.Location = new Point(_picBoxBlock5.Location.X - 3, _picBoxBlock5.Location.Y);
@@ -138,13 +139,13 @@ namespace SpaceDodger
             _picBoxBlock16.Location = new Point(_picBoxBlock16.Location.X - 3, _picBoxBlock16.Location.Y);
             _picBoxBlock17.Location = new Point(_picBoxBlock16.Location.X - 3, _picBoxBlock17.Location.Y);
             _picBoxBlock18.Location = new Point(_picBoxBlock18.Location.X - 3, _picBoxBlock18.Location.Y);
-           
+
 
             if (_picBoxSpaceShip.Bounds.Contains(_picBoxBlock1.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock2.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock3.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock4.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock5.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock6.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock7.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock8.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock9.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock10.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock11.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock12.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock13.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock14.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock15.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock16.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock17.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock18.Location))
             {
                 _view = 1;
             }
-            if (_picBoxBlock1.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock2.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock3.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock4.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock5.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock6.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock7.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock8.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock9.Bounds.Contains(_picBoxSpaceShip.Location) )
+            if (_picBoxBlock1.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock2.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock3.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock4.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock5.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock6.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock7.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock8.Bounds.Contains(_picBoxSpaceShip.Location) || _picBoxBlock9.Bounds.Contains(_picBoxSpaceShip.Location))
             {
                 _view = 1;
             }
@@ -164,6 +165,7 @@ namespace SpaceDodger
                 _timer.Enabled = false;
                 _timer2.Enabled = false;
                 _btnStart.Visible = true;
+                _btnclose.Visible = true;
                 _picBoxSpaceShip.Visible = false;
                 MessageBox.Show("You Lose ! Your Score is  " + _score.ToString());
                 _picBoxBlock1.Visible = false;
@@ -207,7 +209,7 @@ namespace SpaceDodger
                 _picBoxBlock16.Location = new Point(496, 29);
                 _picBoxBlock17.Location = new Point(576, 29);
                 _picBoxBlock18.Location = new Point(659, 29);
-           }
+            }
 
             if (_picBoxBlock1.Location.X < -82)
             {
@@ -443,7 +445,7 @@ namespace SpaceDodger
 
                 }
 
-                
+
             }
         }
     }
