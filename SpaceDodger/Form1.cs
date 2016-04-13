@@ -15,6 +15,8 @@ namespace SpaceDodger
         int _view = 0;
         int _score = 0;
         Random randomizer = new Random();
+        private Form1 _game;
+
         public Form1()
         {
             InitializeComponent();
@@ -447,6 +449,14 @@ namespace SpaceDodger
 
 
             }
+        }
+
+        private void OnClickOptions(object sender, EventArgs e)
+        {
+            GameOptionsForm optionsForm = new GameOptionsForm(_game);
+
+            //display the option form as a dialog and obtain the interaction result
+            DialogResult optFormResult = optionsForm.ShowDialog();
         }
     }
 }
