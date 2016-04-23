@@ -156,7 +156,7 @@ namespace SpaceDodger
             {
                 _view = 1;
             }
-            if (_picBoxSpaceShip.Bounds.Contains(_picBoxBlock10.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock11.Location) || _picBoxBlock11.Bounds.Contains(_picBoxBlock12.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock13.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock14.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock15.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock16.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock17.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock18.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock20.Location))
+            if (_picBoxSpaceShip.Bounds.Contains(_picBoxBlock10.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock11.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock12.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock13.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock14.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock15.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock16.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock17.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock18.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock20.Location))
             {
                 _view = 1;
             }
@@ -372,8 +372,8 @@ namespace SpaceDodger
                     _timer.Enabled = false;
                     _timer2.Enabled = false;
                     _btnStart.Visible = true;
-                    _picBoxSpaceShip.Visible = true;
-                    //MessageBox.Show
+                    _picBoxSpaceShip.Visible = false;
+                    MessageBox.Show("You Lose! Your Score is" + _score.ToString());
                     _picBoxBlock1.Visible = false;
                     _picBoxBlock2.Visible = false;
                     _picBoxBlock3.Visible = false;
