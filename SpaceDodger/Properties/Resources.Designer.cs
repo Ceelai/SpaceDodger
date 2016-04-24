@@ -67,5 +67,7 @@ namespace SpaceDodger.Properties
                 resourceCulture = value;
             }
         }
+
+        
     }
 }
