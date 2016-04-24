@@ -21,13 +21,13 @@ namespace SpaceDodger
 
 
         int sec = 0;
-        Form1 mainForm = new Form1();
+        Form1 forma = new Form1();
         private void timer1_tick(object sender, EventArgs e)
         {
             sec = sec + 1;
             if (sec == 15)
             {
-                mainForm.Visible = true;
+                forma.Visible = true;
                 this.Hide();
 
             }
