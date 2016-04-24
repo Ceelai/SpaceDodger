@@ -25,7 +25,7 @@ namespace SpaceDodger
         private void timer1_tick(object sender, EventArgs e)
         {
             sec = sec + 1;
-            if (sec == 5)
+            if (sec == 15)
             {
                 mainForm.Visible = true;
                 this.Hide();

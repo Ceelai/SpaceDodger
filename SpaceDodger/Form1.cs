@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -97,6 +98,7 @@ namespace SpaceDodger
             _picBoxBlock20.Visible = true;
             _timer.Enabled = true;
             _picBoxStartButton.Visible = false;
+            pictureBox1.Visible = false;
             _timer2.Enabled = true;
             _lblInstructions.Visible = true;
             _lblScore.Visible = true;
@@ -173,6 +175,7 @@ namespace SpaceDodger
                 _timer.Enabled = false;
                 _timer2.Enabled = false;
                 _picBoxStartButton.Visible = true;
+                pictureBox1.Visible = true;
                 _btnclose.Visible = true;
                 _picBoxSpaceShip.Visible = false;
                 MessageBox.Show("You Lose ! Your Score is  " + _score.ToString());
@@ -373,6 +376,7 @@ namespace SpaceDodger
                     _timer.Enabled = false;
                     _timer2.Enabled = false;
                     _picBoxStartButton.Visible = true;
+                    pictureBox1.Visible = true;
                     _picBoxSpaceShip.Visible = false;
                     MessageBox.Show("You Lose! Your Score is" + _score.ToString());
                     _picBoxBlock1.Visible = false;
@@ -425,6 +429,7 @@ namespace SpaceDodger
                 {
                     _timer2.Enabled = false;
                     _picBoxStartButton.Visible = true;
+                    pictureBox1.Visible = true;
                     _picBoxSpaceShip.Visible = false;
                     _picBoxBlock1.Visible = false;
                     _picBoxBlock2.Visible = false;

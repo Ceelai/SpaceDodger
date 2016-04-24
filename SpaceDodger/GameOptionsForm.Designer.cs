@@ -33,9 +33,9 @@
             this._btnOkay = new System.Windows.Forms.Button();
             this._btnCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this._btnTest = new System.Windows.Forms.Button();
             this._btnHard = new System.Windows.Forms.RadioButton();
             this._btnMedium = new System.Windows.Forms.RadioButton();
-            this._btnEasy = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this._btnDark = new System.Windows.Forms.RadioButton();
             this._btnClassic = new System.Windows.Forms.RadioButton();
@@ -66,43 +66,50 @@
             // _btnOkay
             // 
             this._btnOkay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._btnOkay.Location = new System.Drawing.Point(22, 377);
+            this._btnOkay.Location = new System.Drawing.Point(22, 423);
             this._btnOkay.Margin = new System.Windows.Forms.Padding(6);
             this._btnOkay.Name = "_btnOkay";
             this._btnOkay.Size = new System.Drawing.Size(138, 42);
             this._btnOkay.TabIndex = 2;
             this._btnOkay.Text = "OK";
             this._btnOkay.UseVisualStyleBackColor = true;
-            this._btnOkay.Click += new System.EventHandler(this.OnOK);
             // 
             // _btnCancel
             // 
             this._btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._btnCancel.Location = new System.Drawing.Point(350, 377);
+            this._btnCancel.Location = new System.Drawing.Point(350, 423);
             this._btnCancel.Margin = new System.Windows.Forms.Padding(6);
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.Size = new System.Drawing.Size(138, 42);
             this._btnCancel.TabIndex = 2;
             this._btnCancel.Text = "Cancel";
             this._btnCancel.UseVisualStyleBackColor = true;
-            this._btnCancel.Click += new System.EventHandler(this.OnCancel);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this._btnTest);
             this.groupBox1.Controls.Add(this._btnHard);
             this.groupBox1.Controls.Add(this._btnMedium);
-            this.groupBox1.Controls.Add(this._btnEasy);
             this.groupBox1.Location = new System.Drawing.Point(0, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(512, 157);
+            this.groupBox1.Size = new System.Drawing.Size(512, 165);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select a difficulty";
+            // 
+            // _btnTest
+            // 
+            this._btnTest.Location = new System.Drawing.Point(22, 42);
+            this._btnTest.Name = "_btnTest";
+            this._btnTest.Size = new System.Drawing.Size(95, 31);
+            this._btnTest.TabIndex = 3;
+            this._btnTest.Text = "button1";
+            this._btnTest.UseVisualStyleBackColor = true;
             // 
             // _btnHard
             // 
@@ -114,7 +121,6 @@
             this._btnHard.TabIndex = 2;
             this._btnHard.Text = "Hard";
             this._btnHard.UseVisualStyleBackColor = true;
-            this._btnHard.CheckedChanged += new System.EventHandler(this.OnCheckHard);
             // 
             // _btnMedium
             // 
@@ -129,18 +135,6 @@
             this._btnMedium.Text = "Medium (Defualt)";
             this._btnMedium.UseVisualStyleBackColor = true;
             // 
-            // _btnEasy
-            // 
-            this._btnEasy.AutoSize = true;
-            this._btnEasy.Location = new System.Drawing.Point(18, 44);
-            this._btnEasy.Margin = new System.Windows.Forms.Padding(6);
-            this._btnEasy.Name = "_btnEasy";
-            this._btnEasy.Size = new System.Drawing.Size(81, 29);
-            this._btnEasy.TabIndex = 0;
-            this._btnEasy.Text = "Easy";
-            this._btnEasy.UseVisualStyleBackColor = true;
-            this._btnEasy.CheckedChanged += new System.EventHandler(this.OnChecked);
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -148,11 +142,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this._btnDark);
             this.groupBox2.Controls.Add(this._btnClassic);
-            this.groupBox2.Location = new System.Drawing.Point(0, 179);
+            this.groupBox2.Location = new System.Drawing.Point(0, 193);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(512, 146);
+            this.groupBox2.Size = new System.Drawing.Size(512, 170);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Select a theme";
@@ -185,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 443);
+            this.ClientSize = new System.Drawing.Size(513, 489);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this._btnCancel);
@@ -214,9 +208,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton _btnHard;
         private System.Windows.Forms.RadioButton _btnMedium;
-        private System.Windows.Forms.RadioButton _btnEasy;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton _btnDark;
         private System.Windows.Forms.RadioButton _btnClassic;
+        private System.Windows.Forms.Button _btnTest;
     }
 }

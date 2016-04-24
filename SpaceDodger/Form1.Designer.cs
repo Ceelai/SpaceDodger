@@ -343,7 +343,7 @@
             this._lblEndLabel.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Bold);
             this._lblEndLabel.ForeColor = System.Drawing.Color.Firebrick;
             this._lblEndLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this._lblEndLabel.Location = new System.Drawing.Point(464, 426);
+            this._lblEndLabel.Location = new System.Drawing.Point(464, 436);
             this._lblEndLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblEndLabel.Name = "_lblEndLabel";
             this._lblEndLabel.Size = new System.Drawing.Size(370, 24);
@@ -402,9 +402,9 @@
             // _picBoxStartButton
             // 
             this._picBoxStartButton.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxStartButton.Image")));
-            this._picBoxStartButton.Location = new System.Drawing.Point(525, 239);
+            this._picBoxStartButton.Location = new System.Drawing.Point(429, 226);
             this._picBoxStartButton.Name = "_picBoxStartButton";
-            this._picBoxStartButton.Size = new System.Drawing.Size(256, 146);
+            this._picBoxStartButton.Size = new System.Drawing.Size(476, 196);
             this._picBoxStartButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this._picBoxStartButton.TabIndex = 8;
             this._picBoxStartButton.TabStop = false;
@@ -456,7 +456,6 @@
             this.Controls.Add(this._btnclose);
             this.Controls.Add(this._picBoxSpaceShip);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Space Dodger";
@@ -509,7 +508,6 @@
         private System.Windows.Forms.PictureBox _picBoxBlock9;
         private System.Windows.Forms.PictureBox _picBoxBlock18;
         private System.Windows.Forms.PictureBox _picBoxBlock17;
-        private System.Windows.Forms.Timer _timer;
         private System.Windows.Forms.Timer _timer2;
         private System.Windows.Forms.Label _lblInstructions;
         private System.Windows.Forms.Label _lblEndLabel;
@@ -518,6 +516,7 @@
         private System.Windows.Forms.PictureBox _picBoxBlock19;
         private System.Windows.Forms.PictureBox _picBoxBlock20;
         private System.Windows.Forms.PictureBox _picBoxStartButton;
+        public System.Windows.Forms.Timer _timer;
         private System.Windows.Forms.Button _btnOptions;
     }
 }
