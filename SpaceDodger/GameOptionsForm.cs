@@ -14,6 +14,18 @@ namespace SpaceDodger
         public GameOptionsForm(Form1 form1)
         {
             InitializeComponent();
+
+            _game = form1;
+        }
+
+        private void OnLoad (object sender, EventArgs e)
+        {
+            _btnEasy.Checked = Properties.Settings.Default.easy_button;
+            _btnMedium.Checked = Properties.Settings.Default.med_button;
+            _btnHard.Checked = Properties.Settings.Default.hard_button;
+
+            _btnClassic.Checked = Properties.Settings.Default.classic_button;
+            _btnDark.Checked = Properties.Settings.Default.dark_button;
         }
 
         private void OnCancel(object sender, EventArgs e)
@@ -34,6 +46,53 @@ namespace SpaceDodger
 
         private void OnOK(object sender, EventArgs e)
         {
+            if (_btnEasy.Checked)
+            {
+                //_game.easySet();
+
+                //Properties.Settings.Default.ship_timer = _game._timer.Interval;
+
+                _btnEasy.Checked = Properties.Settings.Default.easy_button = true;
+                _btnMedium.Checked = Properties.Settings.Default.med_button = false;
+            }
+
+            if (_btnMedium.Checked)
+            {
+                //_game.medSet();
+
+                //Properties.Settings.Default.ship_timer = _game._timer.Interval;
+
+                _btnEasy.Checked = Properties.Settings.Default.easy_button = false;
+                _btnHard.Checked = Properties.Settings.Default.hard_button = false;
+                _btnMedium.Checked = Properties.Settings.Default.med_button = true;
+            }
+
+            if (_btnHard.Checked)
+            {
+                //_game.hardSet();
+
+                //Properties.Settings.Default.ship_timer = _game._timer.Interval;
+
+                _btnHard.Checked = Properties.Settings.Default.hard_button = true;
+                _btnMedium.Checked = Properties.Settings.Default.med_button = false;
+            }
+
+            if (_btnClassic.Checked)
+            {
+                //_game.BackColor = System.Drawing.Color.AntiqueWhite;
+
+                _btnDark.Checked = Properties.Settings.Default.dark_button = false;
+                _btnClassic.Checked = Properties.Settings.Default.classic_button = true;
+            }
+
+            if (_btnDark.Checked)
+            {
+                //_game.BackColor = System.Drawing.Color.Brown;
+
+                _btnDark.Checked = Properties.Settings.Default.dark_button = true;
+                _btnClassic.Checked = Properties.Settings.Default.classic_button = false;
+            }
+
             //save settings
             Properties.Settings.Default.Save();
 

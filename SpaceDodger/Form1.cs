@@ -19,6 +19,8 @@ namespace SpaceDodger
 
         public Form1()
         {
+            
+
             InitializeComponent();
             _lblEndLabel.Visible = false;
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -484,6 +486,23 @@ namespace SpaceDodger
 
             //display the option form as a dialog and obtain the interaction result
             DialogResult optFormResult = optionsForm.ShowDialog();
+        }
+
+        System.Drawing.Color _color = System.
+
+        public void easySet()
+        {
+            _timer.Interval = 5;
+        }
+
+        public void medSet()
+        {
+            _timer.Interval = 55;
+        }
+
+        public void hardSet()
+        {
+            _timer.Interval = 105;
         }
     }
 }
