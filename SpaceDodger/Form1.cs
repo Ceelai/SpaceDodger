@@ -494,8 +494,7 @@ namespace SpaceDodger
             DialogResult optFormResult = optionsForm.ShowDialog();
         }
 
-        System.Drawing.Color _color = System.
-
+        
         public void easySet()
         {
             _timer.Interval = 5;
