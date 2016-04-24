@@ -96,9 +96,10 @@ namespace SpaceDodger
             _picBoxBlock19.Visible = true;
             _picBoxBlock20.Visible = true;
             _timer.Enabled = true;
-            _btnStart.Visible = false;
+            _picBoxStartButton.Visible = false;
             _timer2.Enabled = true;
             _lblInstructions.Visible = true;
+            _lblScore.Visible = true;
             _lblEndLabel.Visible = false;
             _picBoxSpaceShip.Location = new Point(144, 160);
             _view = 0;
@@ -117,7 +118,7 @@ namespace SpaceDodger
             _lblInstructions.Visible = false;
             _btnclose.Visible = false;
             var player = new System.Media.SoundPlayer();
-            // player.Stream = Properties.Resources.Kalimba;
+            //player.Stream = Properties.Resources.Kalimba;
             player.Play();
             if (_view == 1)
             {
@@ -171,7 +172,7 @@ namespace SpaceDodger
                 player2.Play();
                 _timer.Enabled = false;
                 _timer2.Enabled = false;
-                _btnStart.Visible = true;
+                _picBoxStartButton.Visible = true;
                 _btnclose.Visible = true;
                 _picBoxSpaceShip.Visible = false;
                 MessageBox.Show("You Lose ! Your Score is  " + _score.ToString());
@@ -349,7 +350,7 @@ namespace SpaceDodger
             _lblScore.Text = "Score : " + _score.ToString();
             if (_score > 2499)
             {
-                _picBoxSpaceShip.Location = new Point(_picBoxSpaceShip.Location.X + 3, _picBoxSpaceShip.Location.Y);
+                _picBoxSpaceShip.Location = new Point(_picBoxSpaceShip.Location.X + 4, _picBoxSpaceShip.Location.Y);
                 _timer.Enabled = false;
                 if (_picBoxSpaceShip.Bounds.Contains(_picBoxBlock1.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock2.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock3.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock4.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock5.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock6.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock7.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock8.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock9.Location) || _picBoxSpaceShip.Bounds.Contains(_picBoxBlock19.Location))
                 {
@@ -371,7 +372,7 @@ namespace SpaceDodger
                 {
                     _timer.Enabled = false;
                     _timer2.Enabled = false;
-                    _btnStart.Visible = true;
+                    _picBoxStartButton.Visible = true;
                     _picBoxSpaceShip.Visible = false;
                     MessageBox.Show("You Lose! Your Score is" + _score.ToString());
                     _picBoxBlock1.Visible = false;
@@ -423,7 +424,7 @@ namespace SpaceDodger
                 if (_picBoxSpaceShip.Location.X > 661)
                 {
                     _timer2.Enabled = false;
-                    _btnStart.Visible = true;
+                    _picBoxStartButton.Visible = true;
                     _picBoxSpaceShip.Visible = false;
                     _picBoxBlock1.Visible = false;
                     _picBoxBlock2.Visible = false;

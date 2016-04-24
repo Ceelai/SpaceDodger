@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this._picBoxSpaceShip = new System.Windows.Forms.PictureBox();
             this._btnclose = new System.Windows.Forms.Button();
-            this._btnStart = new System.Windows.Forms.Button();
             this._picBoxBlock11 = new System.Windows.Forms.PictureBox();
             this._picBoxBlock13 = new System.Windows.Forms.PictureBox();
             this._picBoxBlock12 = new System.Windows.Forms.PictureBox();
@@ -58,6 +57,7 @@
             this._lblScore = new System.Windows.Forms.Label();
             this._picBoxBlock19 = new System.Windows.Forms.PictureBox();
             this._picBoxBlock20 = new System.Windows.Forms.PictureBox();
+            this._picBoxStartButton = new System.Windows.Forms.PictureBox();
             this._btnOptions = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this._picBoxSpaceShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._picBoxBlock11)).BeginInit();
@@ -80,11 +80,13 @@
             ((System.ComponentModel.ISupportInitialize)(this._picBoxBlock10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._picBoxBlock19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._picBoxBlock20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picBoxStartButton)).BeginInit();
             this.SuspendLayout();
             // 
             // _picBoxSpaceShip
             // 
             this._picBoxSpaceShip.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxSpaceShip.Image")));
+            this._picBoxSpaceShip.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxSpaceShip.Location = new System.Drawing.Point(264, 295);
             this._picBoxSpaceShip.Margin = new System.Windows.Forms.Padding(6);
             this._picBoxSpaceShip.Name = "_picBoxSpaceShip";
@@ -95,29 +97,20 @@
             // 
             // _btnclose
             // 
+            this._btnclose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._btnclose.Location = new System.Drawing.Point(1179, 7);
             this._btnclose.Margin = new System.Windows.Forms.Padding(2);
             this._btnclose.Name = "_btnclose";
             this._btnclose.Size = new System.Drawing.Size(97, 44);
             this._btnclose.TabIndex = 1;
-            this._btnclose.Text = "Close";
+            this._btnclose.Text = "Quit";
             this._btnclose.UseVisualStyleBackColor = true;
             this._btnclose.Click += new System.EventHandler(this.ClickOnClose);
-            // 
-            // _btnStart
-            // 
-            this._btnStart.Location = new System.Drawing.Point(526, 266);
-            this._btnStart.Margin = new System.Windows.Forms.Padding(2);
-            this._btnStart.Name = "_btnStart";
-            this._btnStart.Size = new System.Drawing.Size(262, 109);
-            this._btnStart.TabIndex = 2;
-            this._btnStart.Text = "Start Game";
-            this._btnStart.UseVisualStyleBackColor = true;
-            this._btnStart.Click += new System.EventHandler(this.StartOnClick);
             // 
             // _picBoxBlock11
             // 
             this._picBoxBlock11.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock11.Image")));
+            this._picBoxBlock11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock11.Location = new System.Drawing.Point(156, 55);
             this._picBoxBlock11.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock11.Name = "_picBoxBlock11";
@@ -129,6 +122,7 @@
             // _picBoxBlock13
             // 
             this._picBoxBlock13.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock13.Image")));
+            this._picBoxBlock13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock13.Location = new System.Drawing.Point(314, 55);
             this._picBoxBlock13.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock13.Name = "_picBoxBlock13";
@@ -140,6 +134,7 @@
             // _picBoxBlock12
             // 
             this._picBoxBlock12.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock12.Image")));
+            this._picBoxBlock12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock12.Location = new System.Drawing.Point(468, 55);
             this._picBoxBlock12.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock12.Name = "_picBoxBlock12";
@@ -151,6 +146,7 @@
             // _picBoxBlock14
             // 
             this._picBoxBlock14.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock14.Image")));
+            this._picBoxBlock14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock14.Location = new System.Drawing.Point(627, 55);
             this._picBoxBlock14.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock14.Name = "_picBoxBlock14";
@@ -162,6 +158,7 @@
             // _picBoxBlock15
             // 
             this._picBoxBlock15.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock15.Image")));
+            this._picBoxBlock15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock15.Location = new System.Drawing.Point(783, 55);
             this._picBoxBlock15.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock15.Name = "_picBoxBlock15";
@@ -173,6 +170,7 @@
             // _picBoxBlock16
             // 
             this._picBoxBlock16.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock16.Image")));
+            this._picBoxBlock16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock16.Location = new System.Drawing.Point(942, 55);
             this._picBoxBlock16.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock16.Name = "_picBoxBlock16";
@@ -184,6 +182,7 @@
             // _picBoxBlock1
             // 
             this._picBoxBlock1.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock1.Image")));
+            this._picBoxBlock1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock1.Location = new System.Drawing.Point(0, 484);
             this._picBoxBlock1.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock1.Name = "_picBoxBlock1";
@@ -195,6 +194,7 @@
             // _picBoxBlock2
             // 
             this._picBoxBlock2.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock2.Image")));
+            this._picBoxBlock2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock2.Location = new System.Drawing.Point(314, 484);
             this._picBoxBlock2.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock2.Name = "_picBoxBlock2";
@@ -206,6 +206,7 @@
             // _picBoxBlock3
             // 
             this._picBoxBlock3.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock3.Image")));
+            this._picBoxBlock3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock3.Location = new System.Drawing.Point(156, 484);
             this._picBoxBlock3.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock3.Name = "_picBoxBlock3";
@@ -217,6 +218,7 @@
             // _picBoxBlock4
             // 
             this._picBoxBlock4.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock4.Image")));
+            this._picBoxBlock4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock4.Location = new System.Drawing.Point(468, 484);
             this._picBoxBlock4.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock4.Name = "_picBoxBlock4";
@@ -228,6 +230,7 @@
             // _picBoxBlock5
             // 
             this._picBoxBlock5.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock5.Image")));
+            this._picBoxBlock5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock5.Location = new System.Drawing.Point(627, 484);
             this._picBoxBlock5.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock5.Name = "_picBoxBlock5";
@@ -239,6 +242,7 @@
             // _picBoxBlock6
             // 
             this._picBoxBlock6.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock6.Image")));
+            this._picBoxBlock6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock6.Location = new System.Drawing.Point(783, 484);
             this._picBoxBlock6.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock6.Name = "_picBoxBlock6";
@@ -250,6 +254,7 @@
             // _picBoxBlock7
             // 
             this._picBoxBlock7.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock7.Image")));
+            this._picBoxBlock7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock7.Location = new System.Drawing.Point(942, 484);
             this._picBoxBlock7.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock7.Name = "_picBoxBlock7";
@@ -261,6 +266,7 @@
             // _picBoxBlock8
             // 
             this._picBoxBlock8.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock8.Image")));
+            this._picBoxBlock8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock8.Location = new System.Drawing.Point(1095, 484);
             this._picBoxBlock8.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock8.Name = "_picBoxBlock8";
@@ -272,6 +278,7 @@
             // _picBoxBlock9
             // 
             this._picBoxBlock9.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock9.Image")));
+            this._picBoxBlock9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock9.Location = new System.Drawing.Point(1249, 484);
             this._picBoxBlock9.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock9.Name = "_picBoxBlock9";
@@ -283,6 +290,7 @@
             // _picBoxBlock18
             // 
             this._picBoxBlock18.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock18.Image")));
+            this._picBoxBlock18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock18.Location = new System.Drawing.Point(1249, 55);
             this._picBoxBlock18.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock18.Name = "_picBoxBlock18";
@@ -294,6 +302,7 @@
             // _picBoxBlock17
             // 
             this._picBoxBlock17.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock17.Image")));
+            this._picBoxBlock17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock17.Location = new System.Drawing.Point(1096, 55);
             this._picBoxBlock17.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock17.Name = "_picBoxBlock17";
@@ -315,26 +324,36 @@
             // _lblInstructions
             // 
             this._lblInstructions.AutoSize = true;
-            this._lblInstructions.Location = new System.Drawing.Point(541, 7);
+            this._lblInstructions.BackColor = System.Drawing.Color.Transparent;
+            this._lblInstructions.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblInstructions.ForeColor = System.Drawing.Color.Firebrick;
+            this._lblInstructions.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this._lblInstructions.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this._lblInstructions.Location = new System.Drawing.Point(464, 9);
             this._lblInstructions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblInstructions.Name = "_lblInstructions";
-            this._lblInstructions.Size = new System.Drawing.Size(248, 25);
+            this._lblInstructions.Size = new System.Drawing.Size(400, 24);
             this._lblInstructions.TabIndex = 4;
             this._lblInstructions.Text = "Press the up arrow to move";
+            this._lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // _lblEndLabel
             // 
             this._lblEndLabel.AutoSize = true;
-            this._lblEndLabel.Location = new System.Drawing.Point(532, 397);
+            this._lblEndLabel.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Bold);
+            this._lblEndLabel.ForeColor = System.Drawing.Color.Firebrick;
+            this._lblEndLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this._lblEndLabel.Location = new System.Drawing.Point(464, 426);
             this._lblEndLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblEndLabel.Name = "_lblEndLabel";
-            this._lblEndLabel.Size = new System.Drawing.Size(242, 25);
+            this._lblEndLabel.Size = new System.Drawing.Size(370, 24);
             this._lblEndLabel.TabIndex = 5;
             this._lblEndLabel.Text = "Congraulations ! You Won";
             // 
             // _picBoxBlock10
             // 
             this._picBoxBlock10.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock10.Image")));
+            this._picBoxBlock10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock10.Location = new System.Drawing.Point(0, 55);
             this._picBoxBlock10.Margin = new System.Windows.Forms.Padding(2);
             this._picBoxBlock10.Name = "_picBoxBlock10";
@@ -346,16 +365,20 @@
             // _lblScore
             // 
             this._lblScore.AutoSize = true;
+            this._lblScore.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Bold);
+            this._lblScore.ForeColor = System.Drawing.Color.Firebrick;
+            this._lblScore.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._lblScore.Location = new System.Drawing.Point(13, 18);
             this._lblScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblScore.Name = "_lblScore";
-            this._lblScore.Size = new System.Drawing.Size(70, 25);
+            this._lblScore.Size = new System.Drawing.Size(100, 24);
             this._lblScore.TabIndex = 6;
             this._lblScore.Text = "Score:";
             // 
             // _picBoxBlock19
             // 
             this._picBoxBlock19.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock19.Image")));
+            this._picBoxBlock19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock19.Location = new System.Drawing.Point(1404, 484);
             this._picBoxBlock19.Margin = new System.Windows.Forms.Padding(4);
             this._picBoxBlock19.Name = "_picBoxBlock19";
@@ -367,6 +390,7 @@
             // _picBoxBlock20
             // 
             this._picBoxBlock20.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxBlock20.Image")));
+            this._picBoxBlock20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._picBoxBlock20.Location = new System.Drawing.Point(1404, 55);
             this._picBoxBlock20.Margin = new System.Windows.Forms.Padding(4);
             this._picBoxBlock20.Name = "_picBoxBlock20";
@@ -375,8 +399,20 @@
             this._picBoxBlock20.TabIndex = 7;
             this._picBoxBlock20.TabStop = false;
             // 
+            // _picBoxStartButton
+            // 
+            this._picBoxStartButton.Image = ((System.Drawing.Image)(resources.GetObject("_picBoxStartButton.Image")));
+            this._picBoxStartButton.Location = new System.Drawing.Point(525, 239);
+            this._picBoxStartButton.Name = "_picBoxStartButton";
+            this._picBoxStartButton.Size = new System.Drawing.Size(256, 146);
+            this._picBoxStartButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this._picBoxStartButton.TabIndex = 8;
+            this._picBoxStartButton.TabStop = false;
+            this._picBoxStartButton.Click += new System.EventHandler(this.StartOnClick);
+            // 
             // _btnOptions
             // 
+            this._btnOptions.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this._btnOptions.Location = new System.Drawing.Point(1052, 7);
             this._btnOptions.Margin = new System.Windows.Forms.Padding(2);
             this._btnOptions.Name = "_btnOptions";
@@ -390,8 +426,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1294, 618);
+            this.Controls.Add(this._picBoxStartButton);
             this.Controls.Add(this._picBoxBlock20);
             this.Controls.Add(this._picBoxBlock19);
             this.Controls.Add(this._lblScore);
@@ -415,10 +452,11 @@
             this.Controls.Add(this._picBoxBlock12);
             this.Controls.Add(this._picBoxBlock13);
             this.Controls.Add(this._picBoxBlock11);
-            this.Controls.Add(this._btnStart);
             this.Controls.Add(this._btnOptions);
             this.Controls.Add(this._btnclose);
             this.Controls.Add(this._picBoxSpaceShip);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Space Dodger";
@@ -444,6 +482,7 @@
             ((System.ComponentModel.ISupportInitialize)(this._picBoxBlock10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._picBoxBlock19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._picBoxBlock20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._picBoxStartButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,7 +492,6 @@
 
         private System.Windows.Forms.PictureBox _picBoxSpaceShip;
         private System.Windows.Forms.Button _btnclose;
-        private System.Windows.Forms.Button _btnStart;
         private System.Windows.Forms.PictureBox _picBoxBlock11;
         private System.Windows.Forms.PictureBox _picBoxBlock13;
         private System.Windows.Forms.PictureBox _picBoxBlock12;
@@ -479,6 +517,7 @@
         private System.Windows.Forms.Label _lblScore;
         private System.Windows.Forms.PictureBox _picBoxBlock19;
         private System.Windows.Forms.PictureBox _picBoxBlock20;
+        private System.Windows.Forms.PictureBox _picBoxStartButton;
         private System.Windows.Forms.Button _btnOptions;
     }
 }

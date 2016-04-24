@@ -11,6 +11,8 @@ namespace SpaceDodger
     {
         private Form1 _game;
 
+        Timer _timer = new Timer();
+
         public GameOptionsForm(Form1 form1)
         {
             InitializeComponent();
@@ -42,6 +44,16 @@ namespace SpaceDodger
 
             //hits the user with a msg that changes saved
             MessageBox.Show("The game changes have been saved. The game will now restart", "Game Options");
+        }
+
+        private void OnChecked(object sender, EventArgs e)
+        {
+            _timer.Interval = 12;
+        }
+
+        private void OnCheckHard(object sender, EventArgs e)
+        {
+
         }
     }
 }
